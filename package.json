@@ -1,0 +1,28 @@
+{
+  "name": "@risecorejs/redis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risecorejs/redis.git"
+  },
+  "keywords": [
+    "redis"
+  ],
+  "author": "Amenov Abdulsalam <risecorejs@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/risecorejs/redis/issues"
+  },
+  "homepage": "https://github.com/risecorejs/redis#readme",
+  "dependencies": {
+    "redis": "^3.1.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
