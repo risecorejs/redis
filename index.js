@@ -59,7 +59,12 @@ module.exports = (options = {}) => {
    * @param withPrefix
    */
   function set(key, payload, withPrefix) {
-    client.set(keyMutation(key, withPrefix), payload)
+    return new Promise((resolve, reject) => {
+      client.set(keyMutation(key, withPrefix), payload, (err, data) => {
+        if (err) reject(err)
+        else resolve(data)
+      })
+    })
   }
 
   /**
@@ -83,7 +88,12 @@ module.exports = (options = {}) => {
    * @param withPrefix
    */
   function del(key, withPrefix) {
-    client.del(keyMutation(key, withPrefix))
+    return new Promise((resolve, reject) => {
+      client.del(keyMutation(key, withPrefix), (err, data) => {
+        if (err) reject(err)
+        else resolve(data)
+      })
+    })
   }
 
   return { client, keyMutation, get, set, keys, del }
